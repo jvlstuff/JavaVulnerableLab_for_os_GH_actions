@@ -13,6 +13,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 #v4
+     
+      - shell: bash
+        run:  | 
+          ls -al
+          
 
       - name: OX Security Scan
         uses: oxsecurity/ox-security-scan@12a49ea84d3f1597cd53b05997f1ad46a4b56935
