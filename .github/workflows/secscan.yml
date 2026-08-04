@@ -1,6 +1,7 @@
 name: Security Scan
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
   pull_request:
@@ -11,14 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: OX Security Scan
         uses: oxsecurity/ox-security-scan@main
         with:
           ox_api_key: ${{ secrets.OX_API_KEY }}
-          # ox_override_blocking: false
-          # ox_timeout: 20
+          ox_override_blocking: false
+          ox_timeout: 40
           # ox_fail_on_timeout: false
           # ox_fail_on_error: false
           # ox_disable_ssl_validation: false
