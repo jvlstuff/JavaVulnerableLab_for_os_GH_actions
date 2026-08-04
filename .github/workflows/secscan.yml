@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: OX Security Scan
-        uses: oxsecurity/ox-security-scan@main
+        uses: oxsecurity/ox-security-scan@12a49ea84d3f1597cd53b05997f1ad46a4b56935
         with:
           ox_api_key: ${{ secrets.OX_API_KEY }}
           ox_override_blocking: false
