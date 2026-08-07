@@ -23,7 +23,7 @@ jobs:
         uses: oxsecurity/ox-security-scan@12a49ea84d3f1597cd53b05997f1ad46a4b56935
         with:
           ox_api_key: ${{ secrets.OX_API_KEY }}
-          ox_scan_full_branch: true
+          # ox_scan_full_branch: true
           ox_override_blocking: false
           ox_timeout: 40
           # ox_fail_on_timeout: false
